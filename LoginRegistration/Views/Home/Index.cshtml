@@ -1,0 +1,34 @@
+﻿@* This is where the registration will go - the landing page for registration*@
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+@using LoginRegistration.Models
+@model User
+<main class="form-register">
+    <a href="/login">Login</a>
+    <form asp-action="Register" asp-controller="Home" method="post">
+        <h1 class="h3 mb-3 fw-normal">Please Register</h1>
+        <div class="form-floating">
+        <input type="text" class="form-control" asp-for="FirstName" placeholder="Jane">
+        <label asp-for="FirstName">First Name</label>
+        </div>
+        <div class="form-floating">
+        <input type="text" class="form-control" asp-for="LastName" placeholder="Doe">
+        <label asp-for="LastName">Last Name</label>
+        </div>
+        <div class="form-floating">
+        <input type="email" class="form-control" asp-for="Email" placeholder="name@example.com">
+        <label asp-for="Email">Email address</label>
+        </div>
+        <div class="form-floating">
+        <input type="password" class="form-control" asp-for="Password" placeholder="Password">
+        <label asp-for="Password">Password</label>
+        </div>
+        <div class="form-floating">
+        <input type="password" class="form-control" asp-for="Confirm">
+        <label asp-for="Confirm">Conrim Password</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+    </form>
+    
+</main>

@@ -1,0 +1,20 @@
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+@using LoginRegistration.Models
+@model Login
+<main class="form-login">
+    <form asp-action="Login" asp-controller="Home" method="post">
+        <h1 class="h3 mb-3 fw-normal">Please Login</h1>
+        <div class="form-floating">
+        <input type="email" class="form-control" asp-for="Email" placeholder="name@example.com">
+        <label asp-for="Email">Email address</label>
+        </div>
+        <div class="form-floating">
+        <input type="password" class="form-control" asp-for="Password">
+        <label asp-for="Password">Password</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+    </form>
+    <a href="/">Register</a>
+</main>
